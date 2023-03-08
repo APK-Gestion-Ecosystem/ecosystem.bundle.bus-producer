@@ -1,0 +1,12 @@
+parameters:
+    # nothing to declare
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Ecosystem\BusBundle\Command\:
+        resource: '../src/Command'
+
+    Ecosystem\BusBundle\Service\:
+        resource: '../src/Service'

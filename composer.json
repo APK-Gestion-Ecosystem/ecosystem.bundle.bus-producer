@@ -1,0 +1,12 @@
+{
+    "name": "ecosystem/bus",
+    "type": "symfony-bundle",
+    "autoload": {
+        "psr-4": {
+            "Ecosystem\\BusBundle\\": "src/"
+        }
+    },
+    "require": {
+        "aws/aws-sdk-php": "^3"
+    }
+}
