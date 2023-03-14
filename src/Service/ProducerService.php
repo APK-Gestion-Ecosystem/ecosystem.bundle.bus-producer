@@ -46,6 +46,7 @@ class ProducerService
                 'TopicArn' => $this->buses[$bus],
                 'Message' => json_encode($payload),
             ]);
+            $this->logger->debug(sprintf('Dispatched message to bus "%s".', $bus));
         } catch (\Exception $exception) {
             $this->logger->critical(sprintf(
                 'Unable to publish to bus "%s". Exception: "%s".',
