@@ -17,8 +17,8 @@ class EcosystemBusProducerBundle extends AbstractBundle
     ): void {
         $containerConfigurator->import('../config/services.yaml');
 
-        foreach ($config['buses'] as $name => $arn) {
-            $containerConfigurator->services()->get(ProducerService::class)->call('addBus', [$name, $arn]);
+        foreach ($config['buses'] as $name => $busConfig) {
+            $containerConfigurator->services()->get(ProducerService::class)->call('addBus', [$name, $busConfig['arn']]);
         }
     }
 
