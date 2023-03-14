@@ -18,7 +18,7 @@ class ProducerService
     {
         $config = [
             'region' => getenv('AWS_REGION'),
-            'version' => '2012-11-05',
+            'version' => '2010-03-31',
         ];
 
         if (getenv('LOCALSTACK')) {
