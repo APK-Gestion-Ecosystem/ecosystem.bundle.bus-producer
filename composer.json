@@ -1,5 +1,5 @@
 {
-    "name": "ecosystem/bus",
+    "name": "ecosystem/bus-producer",
     "type": "symfony-bundle",
     "autoload": {
         "psr-4": {

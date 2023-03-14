@@ -1,16 +1,14 @@
 <?php
 
-namespace Ecosystem\BusBundle;
+namespace Ecosystem\BusProducerBundle;
 
-use Ecosystem\BusBundle\Service\ConsumerService;
-use Ecosystem\BusBundle\Service\PublisherService;
+use Ecosystem\BusProducerBundle\Service\ProducerService;
 use Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
-class EcosystemBusBundle extends AbstractBundle
+class EcosystemBusProducerBundle extends AbstractBundle
 {
     public function loadExtension(
         array $config,
@@ -19,15 +17,9 @@ class EcosystemBusBundle extends AbstractBundle
     ): void {
         $containerConfigurator->import('../config/services.yaml');
 
-        foreach ($config['queues'] as $name => $queueConfig) {
-            $containerConfigurator->services()->get(ConsumerService::class)->call('addQueue', [
-                $name,
-                $queueConfig['url'],
-                new Reference($queueConfig['handler'])
-            ]);
+        foreach ($config['buses'] as $name => $arn) {
+            $containerConfigurator->services()->get(ProducerService::class)->call('addBus', [$name, $arn]);
         }
-
-        $containerConfigurator->services()->get(PublisherService::class)->arg(0, $config['buses']);
     }
 
     public function configure(DefinitionConfigurator $definition): void

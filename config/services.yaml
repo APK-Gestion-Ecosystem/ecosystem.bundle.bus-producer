@@ -5,8 +5,5 @@ services:
         autowire: true
         autoconfigure: true
 
-    Ecosystem\BusBundle\Command\:
-        resource: '../src/Command'
-
-    Ecosystem\BusBundle\Service\:
+    Ecosystem\BusProducerBundle\Service\:
         resource: '../src/Service'

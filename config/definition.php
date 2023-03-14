@@ -8,7 +8,7 @@ return static function (DefinitionConfigurator $definition) {
             ->arrayNode('buses')
                 ->arrayPrototype()
                     ->children()
-                        ->scalarNode('name')->end()
+                        ->scalarNode('arn')->end()
                     ->end()
                 ->end()
             ->end() // buses
