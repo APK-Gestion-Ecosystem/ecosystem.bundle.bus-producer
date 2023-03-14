@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "autoload": {
         "psr-4": {
-            "Ecosystem\\BusBundle\\": "src/"
+            "Ecosystem\\BusProducerBundle\\": "src/"
         }
     },
     "require": {
