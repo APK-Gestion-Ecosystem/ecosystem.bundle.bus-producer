@@ -34,7 +34,7 @@ class ProducerService
         $this->buses[$name] = $arn;
     }
 
-    public function send(array $payload, string $bus = 'default'): void
+    public function publish(array $payload, string $bus = 'default'): void
     {
         if (!isset($this->buses[$bus])) {
             $this->logger->error(sprintf('Bus "%s" not found.', $bus));
