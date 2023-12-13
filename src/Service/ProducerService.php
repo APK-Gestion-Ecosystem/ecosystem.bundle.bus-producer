@@ -44,7 +44,7 @@ class ProducerService
         try {
             $this->client->publish([
                 'TopicArn' => $this->buses[$bus],
-                'Message' => json_encode($payload),
+                'Message' => json_encode($payload, JSON_PRESERVE_ZERO_FRACTION),
             ]);
             $this->logger->debug(sprintf('Dispatched message to bus "%s".', $bus));
         } catch (\Exception $exception) {
