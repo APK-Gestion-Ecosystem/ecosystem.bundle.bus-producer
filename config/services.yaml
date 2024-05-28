@@ -7,3 +7,6 @@ services:
 
     Ecosystem\BusProducerBundle\Service\:
         resource: '../src/Service'
+
+    Ecosystem\BusProducerBundle\Event\:
+        resource: '../src/Event'
