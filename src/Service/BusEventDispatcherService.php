@@ -2,7 +2,7 @@
 
 namespace Ecosystem\BusProducerBundle\Service;
 
-use Ecosystem\Event\EventInterface;
+use Ecosystem\BusProducerBundle\Event\EventInterface;
 
 class BusEventDispatcherService
 {
