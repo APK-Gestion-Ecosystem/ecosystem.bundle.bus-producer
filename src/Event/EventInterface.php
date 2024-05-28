@@ -1,6 +1,6 @@
 <?php
 
-namespace Ecosystem\Event;
+namespace Ecosystem\BusProducerBundle\Event;
 
 interface EventInterface
 {
