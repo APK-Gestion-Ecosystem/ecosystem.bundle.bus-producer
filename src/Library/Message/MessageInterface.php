@@ -4,5 +4,8 @@ namespace Ecosystem\BusProducerBundle\Library\Message;
 
 interface MessageInterface
 {
-    public function toArray();
+    /**
+     * @return array<string, string|mixed>
+     */
+    public function toArray(): array;
 }
