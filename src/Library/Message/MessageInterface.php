@@ -1,6 +1,6 @@
 <?php 
 
-namespace Ecosystem\BusProducerBundle\Message;
+namespace Ecosystem\BusProducerBundle\Library\Message;
 
 interface MessageInterface
 {

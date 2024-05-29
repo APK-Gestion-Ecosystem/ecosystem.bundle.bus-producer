@@ -2,9 +2,7 @@
 
 namespace Ecosystem\BusProducerBundle;
 
-use Ecosystem\BusProducerBundle\CompilerPass\MessageDispatcherCompilerPass;
-use Ecosystem\BusProducerBundle\Processor\MessageProcessorInterface;
-use Ecosystem\BusProducerBundle\Service\MessageDispatcherService;
+use Ecosystem\BusProducerBundle\Library\Processor\MessageProcessorInterface;
 use Ecosystem\BusProducerBundle\Service\ProducerService;
 use Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

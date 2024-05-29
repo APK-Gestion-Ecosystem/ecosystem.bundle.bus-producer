@@ -1,8 +1,8 @@
 <?php
 
-namespace Ecosystem\BusProducerBundle\Processor;
+namespace Ecosystem\BusProducerBundle\Library\Processor;
 
-use Ecosystem\BusProducerBundle\Message\MessageInterface;
+use Ecosystem\BusProducerBundle\Library\Message\MessageInterface;
 
 interface MessageProcessorInterface
 {
