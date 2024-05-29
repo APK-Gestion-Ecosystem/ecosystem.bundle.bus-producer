@@ -8,5 +8,5 @@ services:
     Ecosystem\BusProducerBundle\Service\:
         resource: '../src/Service'
 
-    Ecosystem\BusProducerBundle\Library:
+    Ecosystem\BusProducerBundle\Library\:
         resource: '../src/Library'
