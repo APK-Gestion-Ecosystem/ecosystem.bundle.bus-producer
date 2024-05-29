@@ -5,6 +5,10 @@ services:
         autowire: true
         autoconfigure: true
 
+    _instanceof:
+        Ecosystem\BusProducerBundle\Processor\MessageProcessorInterface:
+            tags: ['ecosystem.bus_producer.message_processor']
+
     Ecosystem\BusProducerBundle\Service\:
         resource: '../src/Service'
 
