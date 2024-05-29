@@ -5,8 +5,8 @@ services:
         autowire: true
         autoconfigure: true
 
-    Ecosystem\BusProducerBundle\Library\:
+    Ecosystem\BusProducerBundle\Service\:
+        resource: '../src/Service'
+
+    Ecosystem\BusProducerBundle\Library:
         resource: '../src/Library'
-        
-    Ecosystem\BusProducerBundle\Message\:
-        resource: '../src/Message'
