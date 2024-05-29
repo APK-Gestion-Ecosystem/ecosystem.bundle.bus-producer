@@ -2,8 +2,7 @@
 
 namespace Ecosystem\BusProducerBundle\Processor;
 
-use Ecosystem\ProcessorBundle\Message\MessageInterface;
-use Symfony\Component\DependencyInjection\Attribute\AsTaggedItem;
+use Ecosystem\BusProducerBundle\Message\MessageInterface;
 
 interface MessageProcessorInterface
 {
